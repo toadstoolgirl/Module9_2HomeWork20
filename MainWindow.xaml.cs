@@ -16,9 +16,7 @@ using System.Xml.Linq;
 
 namespace Module9_2HomeWork20
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -42,6 +40,18 @@ namespace Module9_2HomeWork20
 
             outputPhrase.ItemsSource = filling;
             
+        }
+
+        private void Button_Revert(object sender, RoutedEventArgs e)
+        {
+            string[] filling = inputPhrase.Text.Split(' ');
+            Array.Reverse(filling);
+            foreach (var sub in filling)
+            {
+                var t = String.Join(' ', filling);
+
+            }
+            outputPhrase.ItemsSource = filling;
         }
     }
 }

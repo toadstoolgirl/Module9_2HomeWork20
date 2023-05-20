@@ -26,17 +26,18 @@
             x:Name ="outputPhrase"
             HorizontalAlignment="Left" 
             Height="149" 
-            Margin="10,115,0,0" 
-            VerticalAlignment="Top" 
+            Margin="10,0,0,0" 
+            VerticalAlignment="Center" 
             Width="170" 
-            d:ItemsSource= "{d:SampleData ItemCount=5}" ScrollViewer.HorizontalScrollBarVisibility="Visible" > <!--count 5?-->
+            d:ItemsSource= "{d:SampleData ItemCount=5}" ScrollViewer.HorizontalScrollBarVisibility="Visible" >
+            <!--count 5?-->
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-            <Button 
+        <Button 
             Content="start" 
             HorizontalAlignment="Left" 
             Height="25" 
@@ -47,6 +48,14 @@
             VerticalAlignment="Top" 
             Width="260" 
             Click="Button_Start" UseLayoutRounding="False"/>
+        <Button 
+                Content="revert" 
+                HorizontalAlignment="Left" 
+                Height="25" 
+                Margin="185,98,0,0" 
+                VerticalAlignment="Top" 
+                Width="85"
+                Click="Button_Revert"/>
 
     </Grid>
 </Window>
